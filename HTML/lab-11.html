@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validated Form</title>
+</head>
+<body>
+
+<form autocomplete="on">
+    Name: <input type="text" required autofocus><br><br>
+
+    Phone:
+    <input type="text"
+    pattern="(9851[0-9]{6}|9841[0-9]{6})"
+    required><br><br>
+
+    Birthday:
+    <input type="date" min="1997-01-01" max="2012-12-31"><br><br>
+
+    Gender:
+    <input type="radio" name="g"> Male
+    <input type="radio" name="g"> Female<br><br>
+
+    Car Company:
+    <select>
+        <optgroup label="Indian">
+            <option>Tata</option>
+        </optgroup>
+        <optgroup label="USA">
+            <option>Ford</option>
+        </optgroup>
+        <optgroup label="European">
+            <option>Audi</option>
+        </optgroup>
+    </select><br><br>
+
+    <input type="submit">
+</form>
+
+</body>
+</html>
