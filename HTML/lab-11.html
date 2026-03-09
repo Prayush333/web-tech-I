@@ -3,38 +3,56 @@
 <head>
     <title>Validated Form</title>
 </head>
-<body>
+    <body>
 
-<form autocomplete="on">
-    Name: <input type="text" required autofocus><br><br>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Car Information</legend>
+            
+                Full Name: <input type="text"  placeholder="Your full name"><br><br>
+            
+            
+                Current Address: <input type="text" placeholder="eg. Bhaktapur"><br><br>
+            
+                Email: <input type="email" placeholder="prayush@gmail.com"><br><br>
+            
+            
+                Phone:<input type="tel" placeholder="9841******" pattern="9841[0-9]{6}" required><br><br>
 
-    Phone:
-    <input type="text"
-    pattern="(9851[0-9]{6}|9841[0-9]{6})"
-    required><br><br>
+            
+                Gender:
+                <input type="radio" name="g"> Male
+                <input type="radio" name="g"> Female<br><br>
 
-    Birthday:
-    <input type="date" min="1997-01-01" max="2012-12-31"><br><br>
+            
+                Birthday:<input type="date" min="1997-01-01" max="2012-12-31"><br><br>
 
-    Gender:
-    <input type="radio" name="g"> Male
-    <input type="radio" name="g"> Female<br><br>
+            
+                Choose Car Company: <br>
+                <select>
+                
+                    <optgroup label="Indian:">
+                        <option>Tata</option>
+                        <option>Mahindra</option>
+                    </optgroup>
 
-    Car Company:
-    <select>
-        <optgroup label="Indian">
-            <option>Tata</option>
-        </optgroup>
-        <optgroup label="USA">
-            <option>Ford</option>
-        </optgroup>
-        <optgroup label="European">
-            <option>Audi</option>
-        </optgroup>
-    </select><br><br>
+                    <optgroup label="American:">
+                        <option>Ford</option>
+                        <option > jeep</option>
+                    </optgroup>
 
-    <input type="submit">
-</form>
+                    <optgroup label="European">
+                        <option>Audi</option>
+                        <option>BMW</option>
+                    </optgroup>
+                </select><br><br>
 
-</body>
+                Additional Information:<br><textarea rows="4" cols="50" placeholder="Write something about your car..."></textarea><br><br>
+
+                <input type="submit">
+                <input type="Reset">
+            </fieldset>
+        </form>
+
+    </body>
 </html>
