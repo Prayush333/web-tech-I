@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 8 - Background</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; font-size: 13px; }
+    section { padding: 20px; min-height: 200px; }
+    h2 { margin-bottom: 8px; }
+
+    .no-repeat {
+      background: url('https://www.w3schools.com/css/img_tree.png') no-repeat right top #f5f5dc;
+    }
+    .fixed {
+      background: url('https://www.w3schools.com/css/img_tree.png') no-repeat right top fixed #f0f0f0;
+    }
+    .repeat {
+      background: url('https://www.w3schools.com/css/img_tree.png') repeat #e8f5e9;
+      background-size: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="no-repeat">
+    <h2>Hello World! (background-repeat: no-repeat)</h2>
+    <p>The background image is shown once, positioned at the right top.</p>
+  </section>
+
+  <section class="fixed">
+    <h2>background-attachment: fixed</h2>
+    <p>The background stays fixed when scrolling.</p>
+    <p>Scroll down to see the effect.</p>
+    <p>The background-image scrolls. Try to scroll down the page.</p>
+    <p>The background-image scrolls. Try to scroll down the page.</p>
+  </section>
+
+  <section class="repeat">
+    <h2>background-repeat: repeat</h2>
+    <p>The background image repeats across the element.</p>
+  </section>
+
+</body>
+</html>

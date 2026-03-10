@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 9 - Box Sizing</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 13px; padding: 15px; }
+
+    .cb {
+      box-sizing: content-box;
+      width: 380px; padding: 20px; border: 10px solid green;
+      background: #eafaf1; margin-bottom: 15px;
+    }
+    .bb {
+      box-sizing: border-box;
+      width: 380px; padding: 20px; border: 10px solid green;
+      background: #eafaf1; margin-bottom: 20px;
+    }
+
+    .clone {
+      display: inline;
+      background: #3498db; color: white;
+      padding: 5px 10px; line-height: 3;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+    .slice {
+      display: inline;
+      background: #e74c3c; color: white;
+      padding: 5px 10px; line-height: 3;
+      -webkit-box-decoration-break: slice;
+      box-decoration-break: slice;
+    }
+    .demo { max-width: 260px; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <h3>box-sizing: content-box</h3>
+  <div class="cb">
+    <b>(width applies to content only)</b>
+    <p>Width is 380px but total = 380 + 40px padding + 20px border = 440px.</p>
+  </div>
+
+  <h3>box-sizing: border-box</h3>
+  <div class="bb">
+    <b>(width includes padding and border)</b>
+    <p>Total width stays at 380px including padding and border.</p>
+  </div>
+
+  <h3>box-decoration-break: clone</h3>
+  <div class="demo">
+    <span class="clone">This long inline text wraps and each line gets full decoration.</span>
+  </div>
+
+  <h3>box-decoration-break: slice</h3>
+  <div class="demo">
+    <span class="slice">This long inline text wraps and decoration is sliced across lines.</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 10 - Overflow Float Clear</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 13px; padding: 15px; }
+    .wrap { display: flex; gap: 40px; }
+    h4 { margin: 10px 0 4px; }
+
+    .obox { width: 130px; height: 65px; background: #f1948a; padding: 5px; margin-bottom: 8px; font-size: 12px; }
+    .visible { overflow: visible; }
+    .hidden  { overflow: hidden; }
+    .scroll  { overflow: scroll; }
+
+    .fc { border: 1px solid #ccc; padding: 6px; margin-bottom: 10px; overflow: hidden; width: 220px; font-size: 12px; }
+    .fr  { float: right;  background: #aed6f1; padding: 8px; }
+    .fl  { float: left;   background: #aed6f1; padding: 8px; }
+    .fr2 { float: right;  background: #aed6f1; padding: 8px; }
+    .cr  { clear: right; }
+    .cb  { clear: both; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <h4>Overflow: visible</h4>
+      <div class="obox visible">This content overflows the container.</div>
+
+      <h4>Overflow: hidden</h4>
+      <div class="obox hidden">This content is hidden outside the box.</div>
+
+      <h4>Overflow: scroll</h4>
+      <div class="obox scroll">This content is scrollable within the box. Try scrolling here.</div>
+    </div>
+
+    <div>
+      <h4>Clear: right</h4>
+      <div class="fc">
+        <div class="fr">Floated right</div>
+        <div class="cr">This content is cleared on the right.</div>
+      </div>
+
+      <h4>Clear: both</h4>
+      <div class="fc">
+        <div class="fl">Floated left</div>
+        <div class="fr2">Floated right</div>
+        <div class="cb">This content is cleared on both sides.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

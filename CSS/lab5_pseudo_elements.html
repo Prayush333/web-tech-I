@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 5 - Pseudo-Elements</title>
+  <style>
+    body { font-family: Georgia, serif; padding: 20px; }
+    .box { border: 2px solid #333; padding: 15px; max-width: 460px; }
+
+    /* ::first-letter */
+    p::first-letter { color: red; font-size: 2em; font-weight: bold; }
+
+    /* ::first-line */
+    p::first-line { color: #3498db; }
+
+    /* ::before */
+    p::before { content: "Hi!, "; color: red; font-weight: bold; }
+
+    /* ::after */
+    p::after { content: " ....bye!"; color: green; font-weight: bold; display: block; }
+
+    /* ::placeholder */
+    input::placeholder { font-style: italic; color: #aaa; }
+
+    /* ::selection */
+    .sel::selection { background: #3498db; color: white; }
+    .sel { background: #3498db; color: white; padding: 6px 10px; display: inline-block; margin-top: 8px; }
+
+    input { border: 1px solid #999; padding: 4px; margin-top: 8px; display: block; }
+  </style>
+</head>
+<body>
+  <h3>Pseudo-Elements</h3>
+  <div class="box">
+    <p>... This is a simple paragraph inside a div. It demonstrates the use of pseudo-elements to style content before, after, and within the text.</p>
+    Enter text: <input type="text" placeholder="Type something...">
+    <div class="sel">Select some text to see the ::selection effect.</div>
+  </div>
+</body>
+</html>

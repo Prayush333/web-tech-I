@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 3 - CSS Selectors</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; font-size: 14px; padding: 10px; }
+
+    #main-content { border: 2px solid blue; padding: 12px; max-width: 520px; }
+
+    h1 { color: red; font-size: 16px; margin-bottom: 8px; }
+
+    h2, h3, h4 { color: green; font-size: 14px; margin: 8px 0 4px; }
+
+    nav li { list-style: none; }
+
+    article > p { font-style: italic; color: gray; }
+
+    .highlight { background: yellow; }
+
+    h3 + p { border-left: 3px solid blue; padding-left: 6px; }
+
+    p { margin-bottom: 4px; }
+    input { border: 1px solid gray; padding: 3px; display: block; margin: 3px 0; }
+    a { color: blue; }
+    a:hover { color: red; }
+  </style>
+</head>
+<body>
+  <div id="main-content">
+    <h1>Main Content Section</h1>
+    <article>
+      <h2>Article Title</h2>
+      <p>This paragraph is a direct child of the article (styled with child selector).</p>
+      <div>
+        <p>This paragraph is nested deeper (not styled with child selector).</p>
+        <p class="highlight">This paragraph has the highlight class applied.</p>
+      </div>
+    </article>
+    <h3>Another Heading</h3>
+    <p>This paragraph comes immediately after an h3 (styled with adjacent sibling selector).</p>
+    <p>This paragraph doesn't come immediately after an h3.</p>
+    <h4>Form Example</h4>
+    Name: <input type="text">
+    Email: <input type="email">
+    <p>Visit our <a href="#">website</a> for more information (hover to see effect).</p>
+  </div>
+</body>
+</html>

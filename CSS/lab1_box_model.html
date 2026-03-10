@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 1 - Box Model</title>
+  <style>
+    .margin  { background: red; padding: 15px; width: 350px; }
+    .border  { background: red; padding: 15px; }
+    .padding { background: blue; padding: 20px; }
+    .content { background: green; padding: 15px; text-align: center; color: white; font-weight: bold; }
+    p { color: white; font-weight: bold; margin: 0 0 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h3>CSS Box Model Visualization</h3>
+  <div class="margin">
+    <p>Margin</p>
+    <div class="border">
+      <p>Border</p>
+      <div class="padding">
+        <p>Padding</p>
+        <div class="content">Content</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

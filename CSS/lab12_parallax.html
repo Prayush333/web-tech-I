@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 12 - Parallax</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; }
+
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      min-height: 350px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .parallax h1, .parallax h2 { color: white; text-shadow: 2px 2px 6px #000; }
+    .parallax h1 { font-size: 44px; }
+    .parallax h2 { font-size: 32px; }
+
+    .p1 { background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url('https://www.w3schools.com/css/img_parallax.jpg'); }
+    .p2 { background-image: linear-gradient(rgba(0,0,80,.5),rgba(0,0,80,.5)), url('https://www.w3schools.com/css/img_parallax2.jpg'); }
+    .p3 { background-image: linear-gradient(rgba(0,60,0,.5),rgba(0,60,0,.5)), url('https://www.w3schools.com/css/img_parallax3.jpg'); }
+
+    .content { padding: 50px; text-align: center; }
+    .content p { max-width: 600px; margin: 10px auto; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="parallax p1"><h1>Parallax Website</h1></div>
+  <div class="content"><h2>About Us</h2><p>Scroll to see the parallax effect. Background images move at a different speed than the content.</p></div>
+  <div class="parallax p2"><h2>Our Services</h2></div>
+  <div class="content"><h2>What We Do</h2><p>We create beautiful, functional websites that help businesses grow online.</p></div>
+  <div class="parallax p3"><h2>Contact Us</h2></div>
+  <div class="content"><h2>Get In Touch</h2><p>We would love to hear from you. Reach out anytime.</p></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 2 - Columns</title>
+  <style>
+    .cols {
+      column-count: 3;
+      column-gap: 0;
+      column-rule: 1px dashed gray;
+      border: 1px solid gray;
+      width: 600px;
+    }
+    .item {
+      break-inside: avoid;
+      padding: 12px;
+      font-size: 13px;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h3>Multiple Columns</h3>
+  <div class="cols">
+    <div class="item">Item 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <div class="item">Item 2 - Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div class="item">Item 3 - Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
+    <div class="item">Item 4 - Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+    <div class="item">Item 5 - Excepteur sint occaecat cupidatat non proident.</div>
+    <div class="item">Item 6 - Sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 7 - Display</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 13px; padding: 15px; }
+    .wrap { display: flex; gap: 15px; }
+    .box { border: 1px solid #333; padding: 10px; flex: 1; }
+    h4 { font-size: 13px; margin: 8px 0 4px; }
+
+    .inline span      { display: inline; background: #f1c40f; }
+    .iblock span      { display: inline-block; background: #f1c40f; width: 75px; height: 55px; vertical-align: top; }
+    .iblock .o        { background: #e67e22; }
+    .block  span      { display: block; background: #f1c40f; width: 75px; height: 55px; margin-bottom: 3px; }
+    .block  .o        { background: #e67e22; }
+  </style>
+</head>
+<body>
+  <h3>The display Property</h3>
+  <div class="wrap">
+
+    <div class="box">
+      <h4>display: inline</h4>
+      <div class="inline">
+        <p>Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit.</span> Vestibulum consequat scelerisque. Aliquam erat volutpat. <span>Aliquam</span> <span>venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet.</p>
+      </div>
+
+      <h4>display: inline-block</h4>
+      <div class="iblock">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing. Aliquam erat volutpat. <span>Aliquam</span><span class="o">venenatis</span> gravida nisl sit amet facilisis.</p>
+      </div>
+      <p>Nullam cursus fermentum velit sed laoreet.</p>
+    </div>
+
+    <div class="box">
+      <h4>display: block</h4>
+      <div class="block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing. Aliquam erat volutpat.</p>
+        <span>Aliquam</span>
+        <span class="o">venenatis</span>
+        <p>gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

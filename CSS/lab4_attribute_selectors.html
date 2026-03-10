@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 4 - Attribute Selectors</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 13px; padding: 10px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 700px; }
+    .box { border: 1px solid white; padding: 10px; }
+    h3 { font-size: 13px; border-left: 3px solid blue; padding-left: 6px; margin-bottom: 6px; }
+    code { display: block; background: black; color: green; padding: 4px 6px; font-size: 11px; margin-bottom: 6px; }
+    input, button { margin: 2px; padding: 4px 8px; }
+    div.row { padding: 3px 0; }
+    a { display: block; }
+
+    [data-required]   { border-left: 3px solid red;  }
+    [type="submit"]   { background: green; color: white;  }
+    [class~="hl"]     { background: yellow; }
+    [lang|="en"]      { border-bottom: 2px dotted blue; }
+    [href^="https"]   { color: green; font-weight: bold; }
+    [src$=".jpg"]     { border: 3px solid orange; width: 50px; height: 35px; background: #ccc; display: inline-block; }
+    [title*="important"] { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>CSS Attribute Selectors</h2>
+  <div class="grid">
+
+    <div class="box">
+      <h3>1. [attribute]</h3>
+      <code>[data-required] { border-left: 3px solid red; }</code>
+      <input type="text" data-required placeholder="Required field">
+      <input type="text" placeholder="Optional field">
+      <p data-required>This has data-required</p>
+    </div>
+
+    <div class="box">
+      <h3>2. [attribute="value"]</h3>
+      <code>[type="submit"] { background: #2ecc71; color: white; }</code>
+      <button>Regular</button>
+      <button type="submit">Submit Button</button>
+      <input type="submit" value="Submit Input">
+    </div>
+
+    <div class="box">
+      <h3>3. [attribute~="value"]</h3>
+      <code>[class~="hl"] { background: #f1c40f; }</code>
+      <div class="hl">Has the hl class</div>
+      <div class="no-hl">Doesn't have hl</div>
+      <div class="hlbig">No exact match</div>
+    </div>
+
+    <div class="box">
+      <h3>4. [attribute|="value"]</h3>
+      <code>[lang|="en"] { border-bottom: 2px dotted blue; }</code>
+      <div class="row" lang="en">English</div>
+      <div class="row" lang="en-US">American English</div>
+      <div class="row" lang="en-GB">British English</div>
+      <div class="row" lang="fr">French (not selected)</div>
+    </div>
+
+    <div class="box">
+      <h3>5. [attribute^="value"]</h3>
+      <code>[href^="https"] { color: green; font-weight: bold; }</code>
+      <a href="https://example.com">Secure HTTPS Link</a>
+      <a href="http://example.com">Regular HTTP Link</a>
+      <a href="https://another.com">Another HTTPS Link</a>
+    </div>
+
+    <div class="box">
+      <h3>6. [attribute$="value"]</h3>
+      <code>[src$=".jpg"] { border: 3px solid orange; }</code>
+      <img src="img/coffee.webp" alt="jpg" style="width:50px;height:35px;">
+      <img src="img/laptop.webp" alt="png" style="width:50px;height:35px;">
+      <img src="img/phone.webp" alt="jpg" style="width:50px;height:35px;">
+    </div>
+
+    <div class="box">
+      <h3>7. [attribute*="value"]</h3>
+      <code>[title*="important"] { color: red; font-weight: bold; }</code>
+      <div title="very important notice">This is important</div>
+      <div title="regular notice">Regular notice</div>
+      <div title="important alert">Important alert</div>
+    </div>
+
+  </div>
+</body>
+</html>

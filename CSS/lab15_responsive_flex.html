@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 15 - Responsive (Desktop ~1024px)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; font-size: 13px; }
+
+    .header, .sidebar, .navigation, .main, .ads, .footer {
+      border: 1px solid red;
+      padding: 10px;
+    }
+
+    /* Middle row using flexbox */
+    .row { display: flex; }
+
+    .sidebar { width: 110px; }
+    .center  { flex: 1; display: flex; flex-direction: column; }
+    .navigation { border-left: none; border-right: none; }
+    .main       { flex: 1; min-height: 160px; border-top: none; border-left: none; border-right: none; }
+    .ads        { width: 90px; }
+  </style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="row">
+    <div class="sidebar">Sidebar</div>
+    <div class="center">
+      <div class="navigation">Navigation</div>
+      <div class="main">Main</div>
+    </div>
+    <div class="ads">ads</div>
+  </div>
+  <div class="footer">Footer</div>
+</body>
+</html>
