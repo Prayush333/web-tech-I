@@ -1,31 +1,78 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            p { 
-                color:blue;
-            }
-
-            .box {
-                margin:20px;
-                padding:10px;
-                border:2px solid black;
-                background-color:rgb(173, 230, 179);
-            }
-
-            #main {
-                border: 1px solid black;
-            }
-        </style>
 
     </head>
-<body>
-<p style="color:red;">hello</p>
-<p>yelllow</p>
-<div class="box"></div>
-<div id="main"></div>
+    <body>
+
+        <fieldset>
+            <form action="post" onsubmit="return validate()">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="enter your username " required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="password here" required>
+                buttons:
+                <button  type="button" onclick="saveCookie()">Save</button>
+                <button type="button" onclick="loadCookie()">Load</button>
+                <button type="button" onclick="deleteCookie()">Delete</button>
+            </form>
+        </fieldset>
+        <p id="result"></p>
+        
+        <script>
+            function validate(){
+                let username= document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+
+                userFormat = /^[a-zA-Z0-9]+$/;
+                passwordFormat=/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/
+
+                if (!userFormat.test(username)){
+                    document.getElementById("result").innerHTML="<b> invalid Format</b>";
+                }
+
+                else if (!passwordFormat.test(password)){
+                    document.getElementById("result").innerHTML="<b> invalid Format</b>";
+                }
+
+                else{
+                    document.getElementById("result").innerHTML="<b> Form Submitte please wait for response it may take up to 5hr maximum! </b>";
+                }
+
+            }
+
+            function saveCookie(){
+               let  username = document.getElementById("username").value;
+               let password = document.getElementById("password").value;
+
+               let date = new Date();
+               date.setDate(date.getDate()+5);
+               let expires = "expires=" + date.toUTCString();
+
+               document.cookie="username="+username+";"+expires+";path=/";
+               document.cookie ="password="+password+";"+expires+";path=/";
 
 
-</body>
+            }
+            
+            function loadCookie(){
+                username = document.cookie.split("username=")[1].split(";")[0]; 
+                password = document.cookie.split("password=")[1].split(";")[0]; 
+                document.getElementById("username").value = username;
+                document.getElementById("password").value = password;
+
+            }
+
+            function deleteCookie(){
+
+                document.cookie= "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie= "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+            }
+
+        
+        </script>
+    </body>
 </html>

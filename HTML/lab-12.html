@@ -10,62 +10,65 @@
             <fieldset>
                 <legend>Student Information</legend>
                 <br>
-                <!-- Text input with autofocus and autocomplete -->
-                Full Name:
-                <input type="text" autofocus required>
+             <!-- Text input with autofocus and autocomplete -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" autofocus required>
                 <br><br>
 
-                <!-- Email input -->
-                Email:
-                <input type="email" autocomplete="email" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" autocomplete="email" required>
                 <br><br>
 
                 <!-- Password input -->
-                Password:
-                <input type="password" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
                 <br><br>
 
                 <!-- Number input -->
-                Age:
-                <input type="number"  min="1" max="120" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="1" max="120" required>
                 <br><br>
 
                 <!-- Date input -->
-                Date of Birth:
-                <input type="date" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
                 <br>
 
                 <!-- Radio buttons -->
                 <p>Gender:</p>
-                <input type="radio" id="male" name="gender" required>male
-                <input type="radio" id="female" name="gender" required>female
-                <input type="radio" id="other" name="gender" required>other
+                <input type="radio" id="male" name="gender" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" required>
+                <label for="other">Other</label>
                 
                 <br><br>
 
                 <!-- Checkbox -->
-                <input type="checkbox"  required>
+                <input type="checkbox" id="terms" required>
                 <label for="terms">I agree to the terms and conditions</label>
                 <br><br>
 
                 <!-- Select dropdown -->
-                Country:
-                <select  required>
-                    <option >Nepal</option>
-                    <option >USA</option>
-                    <option >Germany</option>
-                    <option >UK</option>
+                <label for="country">Country:</label>
+                <select id="country" required>
+                    <option>Nepal</option>
+                    <option>USA</option>
+                    <option>Germany</option>
+                    <option>UK</option>
                 </select>
                 <br><br>
 
                 <!-- Textarea -->
-                Short Bio: <br>
-                <textarea rows="4" cols="30"></textarea>
+                <label for="bio">Short Bio:</label> <br>
+                <textarea id="bio" rows="4" cols="30"></textarea>
                 <br><br>
 
                 <!-- Disabled input -->
                 <label for="ref">Referral Code:</label>
-                <input type="text"  value="ABC123" disabled>
+                <input type="text" id="ref" value="ABC123" disabled>
                 <br><br>
 
                 <!-- Submit button -->
