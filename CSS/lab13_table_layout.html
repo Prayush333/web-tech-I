@@ -3,47 +3,40 @@
 <head>
   <title>Lab 13 - Table Layout</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12px; }
-    table { width: 100%; border-collapse: collapse; }
-    td { padding: 10px; vertical-align: top; }
-
-    .hdr { text-align: center; border-bottom: 1px solid #ddd; }
-    .hdr h1 { font-size: 18px; }
-    .hdr p { color: #888; font-size: 11px; }
-
-    .nav { background: #2c3e50; padding: 0; }
-    .nav ul { list-style: none; display: flex; justify-content: center; }
-    .nav ul li a { display: block; padding: 8px 14px; color: white; text-decoration: none; }
-    .nav ul li a:hover { background: #34495e; }
-
-    .side { width: 140px; background: #f9f9f9; border-right: 1px solid #ddd; }
-    .ads  { width: 140px; background: #f9f9f9; border-left:  1px solid #ddd; }
-    .side h3, .ads h3 { color: #e74c3c; border-bottom: 1px solid #ddd; padding-bottom: 3px; margin-bottom: 6px; }
-    .side ul { list-style: none; }
-    .side ul li { margin-bottom: 4px; }
-    .side ul li a { color: #2980b9; text-decoration: none; }
-
-    .main h2 { font-size: 14px; margin-bottom: 8px; }
-    .main h3 { font-size: 13px; margin: 8px 0 3px; }
-    .main p  { color: #555; line-height: 1.4; margin-bottom: 3px; }
-    .main a  { color: #2980b9; font-size: 11px; text-decoration: none; }
-
-    .ftr { background: #2c3e50; color: #ccc; text-align: center; padding: 10px; font-size: 11px; }
-    .ftr a { color: #aaa; text-decoration: none; margin: 0 4px; }
-
-    .evt { margin-bottom: 6px; }
-    .evt strong { display: block; }
-    .evt a { color: #2980b9; }
-    .ads input  { width: 100%; padding: 3px; margin-top: 3px; border: 1px solid #ccc; }
-    .ads button { width: 100%; padding: 3px; background: #2980b9; color: white; border: none; margin-top: 3px; cursor: pointer; }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;font-size:12px}
+    table{width:100%;border-collapse:collapse}
+    td{padding:10px;vertical-align:top}
+    .hdr{text-align:center;border-bottom:1px solid #ddd}
+    .hdr h1{font-size:18px}
+    .hdr p{color:#888;font-size:11px}
+    .nav{background:#2c3e50;padding:0}
+    .nav ul{list-style:none;display:flex;justify-content:center}
+    .nav ul li a{display:block;padding:8px 14px;color:#fff;text-decoration:none}
+    .nav ul li a:hover{background:#34495e}
+    .side,.ads{width:140px;background:#f9f9f9}
+    .side{border-right:1px solid #ddd}
+    .ads{border-left:1px solid #ddd}
+    .side h3,.ads h3{color:#e74c3c;border-bottom:1px solid #ddd;padding-bottom:3px;margin-bottom:6px}
+    .side ul{list-style:none}
+    .side ul li{margin-bottom:4px}
+    .side ul li a,.main a,.evt a{color:#2980b9}
+    .main h2{font-size:14px;margin-bottom:8px}
+    .main h3{font-size:13px;margin:8px 0 3px}
+    .main p,.ads p{color:#555;line-height:1.4;margin-bottom:3px}
+    .main a{font-size:11px;text-decoration:none}
+    .ftr{background:#2c3e50;color:#ccc;text-align:center;padding:10px;font-size:11px}
+    .ftr a{color:#aaa;text-decoration:none;margin:0 4px}
+    .evt{margin-bottom:6px}
+    .evt strong{display:block}
+    .ads input,.ads button{width:100%;padding:3px;margin-top:3px}
+    .ads input{border:1px solid #ccc}
+    .ads button{background:#2980b9;color:#fff;border:none;cursor:pointer}
   </style>
 </head>
 <body>
 <table>
   <tr><td class="hdr" colspan="3"><h1>Tech News 2025</h1><p>Your source for the latest in technology</p></td></tr>
-  <tr><td class="nav" colspan="3" style="padding:0">
-    <ul><li><a href="#">Home</a></li><li><a href="#">Latest Tech</a></li><li><a href="#">AI Updates</a></li><li><a href="#">Reviews</a></li><li><a href="#">Contact</a></li></ul>
-  </td></tr>
+  <tr><td class="nav" colspan="3" style="padding:0"><ul><li><a href="#">Home</a></li><li><a href="#">Latest Tech</a></li><li><a href="#">AI Updates</a></li><li><a href="#">Reviews</a></li><li><a href="#">Contact</a></li></ul></td></tr>
   <tr>
     <td class="side">
       <h3>Trending Topics</h3>
@@ -55,7 +48,7 @@
       </ul>
       <br><strong>Sponsored</strong>
       <p>Try Amazon Prime free 30-day trial</p>
-      <a href="#" style="color:#2980b9">Sign up now</a>
+      <a href="#">Sign up now</a>
     </td>
     <td class="main">
       <h2>Breaking Tech News</h2>
@@ -73,17 +66,13 @@
       <h3>Upcoming Events</h3>
       <div class="evt"><strong>Samsung Unpacked</strong>July 10, 2025<br><a href="#">Details</a></div>
       <div class="evt"><strong>Meta Connect</strong>Sep 25-26, 2025<br><a href="#">Details</a></div>
-      <h3 style="margin-top:8px;">Newsletter</h3>
+      <h3 style="margin-top:8px">Newsletter</h3>
       <p>Subscribe to weekly tech digest:</p>
       <input type="email" placeholder="Your email">
       <button>Subscribe</button>
     </td>
   </tr>
-  <tr><td class="ftr" colspan="3">
-    © 2025 Tech News. All rights reserved.<br>
-    Follow us: <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a><br>
-    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-  </td></tr>
+  <tr><td class="ftr" colspan="3">© 2025 Tech News. All rights reserved.<br>Follow us: <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a><br><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></td></tr>
 </table>
 </body>
 </html>

@@ -3,30 +3,18 @@
 <head>
   <title>Lab 16 - Responsive (Tablet ~768px)</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; font-size: 13px; }
-
-    .header, .navigation, .sidebar, .main, .ads, .footer {
-      border: 1px solid red;
-      padding: 10px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "sidebar main"
-        "ads     footer";
-      grid-template-columns: 130px 1fr;
-    }
-
-    .header     { grid-area: header; }
-    .navigation { grid-area: nav;     border-top: none; }
-    .sidebar    { grid-area: sidebar; border-top: none; min-height: 140px; }
-    .main       { grid-area: main;    border-top: none; border-left: none; }
-    .ads        { grid-area: ads;     border-top: none; }
-    .footer     { grid-area: footer;  border-top: none; border-left: none; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Arial;font-size:13px}
+    .header,.navigation,.sidebar,.main,.ads,.footer{border:1px solid red;padding:10px}
+    .grid{display:grid;grid-template-areas:"header header" "nav nav" "sidebar main" "ads footer";grid-template-columns:130px 1fr}
+    .header{grid-area:header}
+    .navigation{grid-area:nav}
+    .sidebar{grid-area:sidebar;min-height:140px}
+    .main{grid-area:main}
+    .ads{grid-area:ads}
+    .footer{grid-area:footer}
+    .navigation,.sidebar,.main,.ads,.footer{border-top:none}
+    .main,.footer{border-left:none}
   </style>
 </head>
 <body>
