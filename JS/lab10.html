@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 10 - Car Class</title>
+</head>
+<body>
+
+  <h2>Car Class with Inheritance</h2>
+  <button onclick="showCarDetails()">Show Car Details</button>
+  <p id="output"></p>
+
+  <script>
+    class Car {
+      constructor(model, year) {
+        this.model = model;
+        this.year = year;
+      }
+
+      display() {
+        return "Model: " + this.model + ", Manufacturing Year: " + this.year;
+      }
+    }
+
+    class CarWithAge extends Car {
+      constructor(model, year) {
+        super(model, year);
+      }
+
+      getAge() {
+        let currentYear = new Date().getFullYear();
+        return currentYear - this.year;
+      }
+    }
+
+    function showCarDetails() {
+      let myCar = new CarWithAge("Toyota Corolla", 2015);
+      let result = myCar.display() + "<br>Car Age: " + myCar.getAge() + " years";
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 7</title>
+</head>
+<body>
+<script>
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        this.getFullName = function () {
+            return this.firstName + " " + this.lastName;
+        };
+
+        this.changeLastName = function (newLastName) {
+            this.lastName = newLastName;
+        };
+    }
+
+    let person = new Person("samikshya", "poudel");
+
+    document.write("Before : " + person.getFullName() + "<br>");
+
+    person.changeLastName("sharma");
+
+    document.write("After  : " + person.getFullName() + "<br>");
+</script>
+</body>
+</html>

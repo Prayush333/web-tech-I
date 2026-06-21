@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<bookstore>
+    <book category="COOKING" lang="en">
+        <title>Everyday Italian</title>
+        <author>Giada De Laurentiis</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+    <book category="CHILDREN" lang="en">
+        <title>Harry Potter</title>
+        <author>J K. Rowling</author>
+        <year>2005</year>
+        <price>49.99</price>
+    </book>
+    <book category="WEB" lang="en">
+        <title>Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+    </book>
+    <book category="WEB" lang="en">
+        <title>XQuery Kick Start</title>
+        <author>James McGovern</author>
+        <year>2003</year>
+        <price>59.95</price>
+    </book>
+    <book category="PROGRAMMING" lang="en">
+        <title>JavaScript The Good Parts</title>
+        <author>Douglas Crockford</author>
+        <year>2008</year>
+        <price>65.50</price>
+    </book>
+</bookstore>

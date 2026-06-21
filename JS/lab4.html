@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4</title>
+</head>
+<body>
+<script>
+    function isEven(n) {
+        return n % 2 === 0;
+    }
+
+    let a = parseInt(prompt("Enter first number: "));
+    let b = parseInt(prompt("Enter second number: "));
+
+    if (isEven(a) && isEven(b)) {
+        document.write("Both are even." + "<br>");
+        document.write("Sum : " + (a + b) + "<br>");
+    } else {
+        document.write("Not both even." + "<br>");
+        document.write("Difference : " + Math.abs(a - b) + "<br>");
+    }
+</script>
+</body>
+</html>

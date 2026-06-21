@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 14 - jQuery Toggle</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <h2>jQuery Toggle Background Color and Paragraph Visibility</h2>
+  <button id="colorBtn">Toggle Background Color</button>
+  <button id="paraBtn">Toggle Paragraph</button>
+
+  <p id="myPara">This is a paragraph that will be toggled.</p>
+
+  <script>
+    $(document).ready(function () {
+      $("#colorBtn").click(function () {
+        if ($("body").css("background-color") === "rgb(255, 255, 255)" ||
+            $("body").css("background-color") === "") {
+          $("body").css("background-color", "lightyellow");
+        } else {
+          $("body").css("background-color", "white");
+        }
+      });
+
+      $("#paraBtn").click(function () {
+        $("#myPara").toggle();
+      });
+    });
+  </script>
+
+</body>
+</html>

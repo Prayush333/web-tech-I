@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 11 - Error Handling</title>
+</head>
+<body>
+
+  <h2>Error Handling in JavaScript</h2>
+
+  <h3>a) try...catch</h3>
+  <button onclick="tryCatchDemo()">Run try...catch Example</button>
+  <p id="output1"></p>
+
+  <h3>b) window.onerror</h3>
+  <button onclick="windowErrorDemo()">Run window.onerror Example</button>
+  <p id="output2"></p>
+
+  <script>
+    function tryCatchDemo() {
+      try {
+        let result = 10 / undefinedVariable;
+        document.getElementById("output1").innerText = result;
+      } catch (error) {
+        document.getElementById("output1").innerText =
+          "Error caught: " + error.message;
+      }
+    }
+
+    window.onerror = function (message, source, lineno, colno, error) {
+      document.getElementById("output2").innerText =
+        "Error caught by window.onerror: " + message;
+      return true;
+    };
+
+    function windowErrorDemo() {
+      nonExistentFunction();
+    }
+  </script>
+
+</body>
+</html>

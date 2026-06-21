@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 13 - Form Validation</title>
+</head>
+<body>
+
+  <h2>Form Validation</h2>
+
+  <form onsubmit="return validateForm()">
+    <label>Email: </label>
+    <input type="text" id="email"><br><br>
+
+    <label>Phone Number: </label>
+    <input type="text" id="phone"><br><br>
+
+    <label>Password: </label>
+    <input type="text" id="password"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="output"></p>
+
+  <script>
+    function validateForm() {
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+      let password = document.getElementById("password").value;
+      let messages = [];
+
+      let emailPattern = /^[^\s@]+@(gmail\.com|hotmail\.com)$/;
+      if (emailPattern.test(email)) {
+        messages.push("Email is valid.");
+      } else {
+        messages.push("Email is invalid. Must end with @gmail.com or @hotmail.com");
+      }
+
+      let ntcPattern = /^(9841|9851)\d{6}$/;
+      let ncellPattern = /^980\d{7}$/;
+      if (ntcPattern.test(phone) || ncellPattern.test(phone)) {
+        messages.push("Phone number is valid.");
+      } else {
+        messages.push("Phone number is invalid.");
+      }
+
+      let passPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{12,}$/;
+      if (passPattern.test(password)) {
+        messages.push("Password is valid.");
+      } else {
+        messages.push("Password is invalid. Must have at least 12 characters, one uppercase, one lowercase, one number, and one special symbol.");
+      }
+
+      document.getElementById("output").innerHTML = messages.join("<br>");
+      return false;
+    }
+  </script>
+
+</body>
+</html>

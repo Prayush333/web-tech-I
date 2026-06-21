@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 3</title>
+</head>
+<body>
+<script>
+    function isPrime(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) return false;
+        }
+        return true;
+    }
+
+    let a = parseInt(prompt("Enter first number: "));
+    let b = parseInt(prompt("Enter second number: "));
+
+    if (isPrime(a) && isPrime(b)) {
+        document.write(a + " and " + b + " are both prime." + "<br>");
+        document.write("Sum : " + (a + b) + "<br>");
+    } else {
+        document.write("Both numbers are not prime. Addition not performed." + "<br>");
+    }
+</script>
+</body>
+</html>

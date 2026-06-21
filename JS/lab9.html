@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 9 - Compare Dates</title>
+</head>
+<body>
+
+  <h2>Compare Today's Date with February 15, 2015</h2>
+  <button onclick="compareDates()">Compare</button>
+
+  <script>
+    function compareDates() {
+      let today = new Date();
+      let givenDate = new Date("2015-02-15");
+
+      if (today > givenDate) {
+        alert("Today's date is after February 15, 2015");
+      } else if (today < givenDate) {
+        alert("Today's date is before February 15, 2015");
+      } else {
+        alert("Today's date is the same as February 15, 2015");
+      }
+    }
+  </script>
+
+</body>
+</html>

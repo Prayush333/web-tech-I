@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 15 - jQuery Animate Car</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <h2>jQuery Car Animation</h2>
+
+  <div id="car" style="position:relative; left:0px;">🚗</div>
+
+  <br>
+  <button id="forwardBtn">Move Forward</button>
+  <button id="stopBtn">Stop</button>
+  <button id="reverseBtn">Reverse</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#forwardBtn").click(function () {
+        $("#car").animate({ left: "400px" }, 3000);
+      });
+
+      $("#stopBtn").click(function () {
+        $("#car").stop();
+      });
+
+      $("#reverseBtn").click(function () {
+        $("#car").animate({ left: "0px" }, 3000);
+      });
+    });
+  </script>
+
+</body>
+</html>

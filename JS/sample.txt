@@ -1,0 +1,2 @@
+This is a sample text file read asynchronously using AJAX (XMLHttpRequest).
+If you can see this message, the file was loaded successfully with status code 200.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 12 - Cookies</title>
+</head>
+<body>
+
+  <h2>Set, Get, and Delete Cookie</h2>
+  <button onclick="setCookie()">Set Cookie</button>
+  <button onclick="getCookie()">Get Cookie</button>
+  <button onclick="deleteCookie()">Delete Cookie</button>
+  <p id="output"></p>
+
+  <script>
+    function setCookie() {
+      document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2026 23:59:59 GMT; path=/";
+      document.getElementById("output").innerText = "Cookie has been set.";
+    }
+
+    function getCookie() {
+      let cookies = document.cookie;
+      document.getElementById("output").innerText = "Cookies: " + cookies;
+    }
+
+    function deleteCookie() {
+      document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+      document.getElementById("output").innerText = "Cookie has been deleted.";
+    }
+  </script>
+
+</body>
+</html>

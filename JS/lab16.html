@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 16 - AJAX JSON Card Layout</title>
+</head>
+<body>
+
+  <h2>Fetch JSON Data and Display as Cards</h2>
+  <button onclick="loadData()">Load Data</button>
+  <div id="cardContainer"></div>
+
+  <script>
+    function loadData() {
+      fetch("data.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (jsonData) {
+          let output = "";
+          jsonData.forEach(function (person) {
+            output += "<div>";
+            output += "<h3>" + person.name + "</h3>";
+            output += "<p>Age: " + person.age + "</p>";
+            output += "<p>City: " + person.city + "</p>";
+            output += "</div><hr>";
+          });
+          document.getElementById("cardContainer").innerHTML = output;
+        })
+        .catch(function (error) {
+          document.getElementById("cardContainer").innerText =
+            "Error fetching data: " + error;
+        });
+    }
+  </script>
+
+</body>
+</html>
